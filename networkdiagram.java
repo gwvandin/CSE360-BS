@@ -24,26 +24,39 @@ public static void main(String args[]){
     size++;
     System.out.print("would you like to continue to add nodes?(y/n)\n");
 	continuetest= scanIn.next().charAt(0);
+	scanIn.nextLine();
 	if(continuetest=='n'){
 		check=true;
 	}
     
     while(check==false){
-    	
-    	System.out.print("Enter the activty name of the additional node then hit ENTER\n");
+
+        System.out.print("Enter the activty name of the additional node then hit ENTER\n");
         activityname[size] = scanIn.nextLine();
-        System.out.print("Enter the activty duration of the additional nodethen hit ENTER\n");
+        
+        
+        
+        System.out.print("Enter the activty duration of the additional node then hit ENTER\n");
         activityduration[size]=scanIn.nextInt();
+        scanIn.nextLine();
+
+        
         System.out.print("Enter the activity's list of dependencies separated by commas then hit ENTER (Ex. a,b,c\n");
         activitydependencies[size] = scanIn.nextLine();
-    	
-    	size++;
+        
+        
+        size++;
     	
     	System.out.print("would you like to continue to add nodes?(y/n)\n");
     	continuetest= scanIn.next().charAt(0);
+    	scanIn.nextLine();
     	if(continuetest=='n'){
     		check=true;
     	}
+    	System.out.print(activityname[size-1]);
+    	System.out.print(activityduration[size-1]);
+    	System.out.print(activitydependencies[size-1]);
+    	System.out.print("\n");
     }
     scanIn.close();
 }
